@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─────────────────────────────────────────────
+   🌈 CSS Variables (Light + Dark)
+────────────────────────────────────────────── */
+:root {
+  --background: #ffffff;
+  --foreground: #0f0f0f;
+  --brand-purple: #2b0c7a;
+}
+
+.dark {
+  --background: #0f0f0f;
+  --foreground: #f9f9f9;
+}
+
+/* ─────────────────────────────────────────────
+   🧱 Global Defaults
+────────────────────────────────────────────── */
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+}
+
+/* ─────────────────────────────────────────────
+   🎨 Buttons and Shared UI
+────────────────────────────────────────────── */
+.btn-primary {
+  background-color: var(--brand-purple);
+  color: #ffffff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+/* Optional: smooth transitions for theme toggling */
+* {
+  transition-property: background-color, color, border-color, fill, stroke;
+  transition-duration: 200ms;
+  transition-timing-function: ease-in-out;
+}
